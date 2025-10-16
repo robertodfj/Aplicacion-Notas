@@ -2,13 +2,19 @@ package com.example.notas;
 
 public class NotasModel {
     public String Titulo;
-    public String Descripcion;
+    public String Contenido;
+    private boolean Segura;
+    private String Contraseña;
 
-    public NotasModel(String titulo, String descripcion) {
+    // Constructor
+    public NotasModel(String titulo, String contenido) {
         Titulo = titulo;
-        Descripcion = descripcion;
+        Contenido = contenido;
+        Segura = false;
+        Contraseña = "";
     }
 
+    // Getters y setters para Titulo y Contenido
     public String getTitulo() {
         return Titulo;
     }
@@ -17,4 +23,28 @@ public class NotasModel {
         Titulo = titulo;
     }
 
+    public String getContenido() {
+        return Contenido;
+    }
+
+    public void setContenido(String contenido) {
+        Contenido = contenido;
+    }
+
+    // Getters y setters para seguridad
+    public boolean isSegura() {
+        return Segura;
+    }
+
+    public void setSegura(boolean segura) {
+        Segura = segura;
+    }
+
+    public String getContraseña() {
+        return Contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        Contraseña = contraseña;
+    }
 }

@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         btnAñadir = findViewById(R.id.button3);
 
         notasList = new ArrayList<>();
-        notasAdapter = new NotasAdapter(notasList);
+        notasAdapter = new NotasAdapter(this, notasList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(notasAdapter);
 
