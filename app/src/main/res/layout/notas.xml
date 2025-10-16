@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/cardview_dark_background"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Título"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="10sp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:text="Ver nota" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10sp"
+                android:text="Añadir seguridad" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema principal de la app -->
+    <style name="Theme.Notas" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Colores principales -->
+        <item name="colorPrimary">@color/ColorPrincipal</item>
+        <item name="colorPrimaryVariant">@color/ColorPrincipal</item>
+        <item name="colorOnPrimary">@color/Negro</item>
+
+        <item name="colorSecondary">@color/ColorPrincipal</item>
+        <item name="colorSecondaryVariant">@color/ColorPrincipal</item>
+        <item name="colorOnSecondary">@color/Negro</item>
+
+        <!-- Fondo y texto -->
+        <item name="android:colorBackground">@color/FondoClaro</item>
+        <item name="android:textColor">@color/Negro</item>
+
+        <!-- Status bar y navegación -->
+        <item name="android:statusBarColor">@color/ColorPrincipal</item>
+        <item name="android:navigationBarColor">@color/FondoClaro</item>
+
+        <!-- Componentes Material -->
+        <item name="colorSurface">@color/Blanco</item>
+        <item name="colorOnSurface">@color/Negro</item>
+        <item name="colorError">@color/ColorPrincipal</item>
+
+        <!-- Para botones flotantes, toolbars, etc. -->
+        <item name="android:buttonStyle">@style/Widget.MaterialComponents.Button</item>
+
+    </style>
+
+</resources>

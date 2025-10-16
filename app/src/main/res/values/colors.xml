@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="FondoClaro">#C8C8C8</color>
+    <color name="FondoOscuro">#494949</color>
+    <color name="Blanco">#FFFFFF</color>
+    <color name="Negro">#000000</color>
+    <color name="ColorPrincipal">#FFCB00</color>
+</resources>
