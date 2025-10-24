@@ -1,17 +1,22 @@
 package com.example.notas;
 
+import android.graphics.Color;
+
 public class NotasModel {
     public String Titulo;
     public String Contenido;
     private boolean Segura;
     private String Contraseña;
 
+    private int Color;
+
     // Constructor
-    public NotasModel(String titulo, String contenido) {
+    public NotasModel(String titulo, String contenido, int color) {
         Titulo = titulo;
         Contenido = contenido;
         Segura = false;
         Contraseña = "";
+        Color = color;
     }
 
     // Getters y setters para Titulo y Contenido
@@ -46,5 +51,13 @@ public class NotasModel {
 
     public void setContraseña(String contraseña) {
         Contraseña = contraseña;
+    }
+
+    public int getColor() {
+        return Color;
+    }
+
+    public void setColor(int color) {
+        Color = color;
     }
 }

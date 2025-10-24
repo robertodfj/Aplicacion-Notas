@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,7 +60,7 @@ public class NotasAdapter extends RecyclerView.Adapter<NotasAdapter.ViewHolder> 
                         .setNegativeButton("Cancelar", null)
                         .setPositiveButton("Guardar", (dialog, which) -> {
                             String pass = editText.getText().toString().trim();
-                            if (!pass.isEmpty() || pass == nota.getContraseña()) {
+                            if (!pass.isEmpty() && pass.equals(nota.getContraseña())) {
                                 ((Activity) context).startActivityForResult(intent, 100);
                                 Toast.makeText(context, "Acceso permitido", Toast.LENGTH_SHORT).show();
                             } else {
@@ -116,6 +117,26 @@ public class NotasAdapter extends RecyclerView.Adapter<NotasAdapter.ViewHolder> 
                         .show();
             }
         });
+
+        holder.colores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final int[] colores = {
+                        Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW, Color.MAGENTA
+                };
+                String[] nombresColores = {"Rojo", "Verde", "Azul", "Amarillo", "Magenta"};
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Selecciona un color");
+                builder.setItems(nombresColores, (dialog, which) -> {
+                    // Cambiar el fondo del View al color seleccionado
+                    holder.colores.setBackgroundColor(colores[which]);
+
+                    // Guardar el color en tu modelo de nota
+                    nota.setColor(colores[which]);
+                });
+                builder.show();
+            }
+        });
     }
 
     @Override
@@ -127,11 +148,14 @@ public class NotasAdapter extends RecyclerView.Adapter<NotasAdapter.ViewHolder> 
         TextView textTitle;
         Button buttonVerNota, buttonSeguridad;
 
+        View colores;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textTitle = itemView.findViewById(R.id.textTitle);
             buttonVerNota = itemView.findViewById(R.id.button2); // este es tu botón "Ver nota"
             buttonSeguridad = itemView.findViewById(R.id.button4); // este es tu botón "Añadir seguridad"
+            colores = itemView.findViewById(R.id.colorIndicator); // este es el view "colores"
         }
     }
 }

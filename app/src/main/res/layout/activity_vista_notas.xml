@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".VistaNotas">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Título"
-            android:textSize="20sp"
+            android:textSize="40sp"
             android:textStyle="bold"
             android:padding="8dp"/>
 
@@ -33,13 +33,19 @@
             android:inputType="textMultiLine"
             android:background="@android:color/white"/>
 
-        <Button
-            android:id="@+id/btnGuardar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Guardar"
-            android:layout_marginTop="12dp"/>
+            <Button
+                android:id="@+id/btnExportar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Exportar Archivo" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Guardar" />
+        </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
